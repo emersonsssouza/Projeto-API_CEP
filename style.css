@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: "Exercito";
+    src: url(Fontes/conthrax-sb.otf);
+}
+
+body,
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #000;
+}
+
+main header h1 {
+    font-size: 4rem;
+    font-family: "Exercito";
+    letter-spacing: 0.3rem;
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 0, 0.818);
+    text-align: center;
+}
+
+main .form {
+    display: block;
+    width: auto;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.481);
+    padding: 2rem;
+}
+
+fieldset {
+    border-color: rgba(255, 255, 0, 0.818);
+    border-radius: 0.5rem;
+}
+
+legend {
+    font-family: "Arial";
+    font-size: 2rem;
+    color: rgba(255, 255, 0, 0.818);
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.form .input_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: auto;
+    padding: 1rem;
+}
+
+.form .input_box .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 2rem;
+    margin: 0 1rem;
+}
+
+.form .input_box .box label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 2rem;
+    color: rgba(255, 255, 0, 0.818);
+    margin: 0 0.1rem;
+}
+
+.form .input_box .box input {
+    width: 100%;
+    height: 2rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.649);
+    color: #000;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+}
+
+.form .input_box .box input::placeholder {
+    color: #000;
+}
+
+.form .input_box .box input:active {
+    background-color: rgba(255, 255, 255, 0.500);
+}
+
+.form .input_box .box input:hover {
+    cursor: auto;
+}
+
+@media (max-width: 450px) {
+    main header h1 {
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+
+    main {
+        width: 100%;
+        margin: auto;
+    }
+
+    main form.form {
+        height: auto;
+        width: 100%;
+    }
+
+    legend {
+        font-size: 1rem;
+    }
+
+    .form .input_box {
+        flex-direction: column;
+        margin: 0;
+    }
+
+
+    .form .input_box .box {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .form .input_box .box label {
+        font-size: 1.3rem;
+        margin: 0.1rem 0rem;
+        padding: 0;
+    }
+
+    .form .input_box .box input {
+        width: 100%;
+        margin: 0;
+    }
+
+    footer {
+        width: 100vw;
+        height: 2rem;
+        background-color: transparent;
+    }
+
+    footer p {
+        text-align: center;
+        font-size: 0.8rem;
+        font-family: "Arial";
+        letter-spacing: 2px;
+        color: white;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    main header h1 {
+        font-size: 1.7rem;
+    }
+
+    legend {
+        font-size: 1rem;
+    }
+
+    .form .input_box {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .form .input_box .box {
+        width: 90vw;
+        height: auto;
+        margin: 0.2rem 0;
+    }
+
+    .form .input_box .box label {
+        font-size: 1.1rem;
+        margin: 0.1rem 0rem;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .form .input_box .box input {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) and (orientation: landscape) {
+    main header h1 {
+        font-size: 1.7rem;
+    }
+
+    legend {
+        font-size: 1rem;
+    }
+
+    .form .input_box {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .form .input_box .box {
+        width: 90vw;
+        height: auto;
+        margin: 0.2rem 0;
+    }
+
+    .form .input_box .box label {
+        font-size: 1.1rem;
+        margin: 0.1rem 0rem;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .form .input_box .box input {
+        width: 100%;
+        margin: 0;
+    }
+}
