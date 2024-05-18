@@ -2,54 +2,53 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Consulta CEP</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Consulta CEP</title>
 </head>
 
 <body>
-    <main>
-        <header>
-            <h1>ViaCep 1.0</h1>
-        </header>
+  <main>
+    <header>
+      <h1>ViaCep 1.0 <i class="fa-brands fa-searchengin"></i></h1>
+    </header>
 
-        <form action="" method="get" class="form" id="">
-            <fieldset>
-                <legend>Consulta de CEP</legend>
-                <div class="input_box">
-                    <div class="box">
-                        <label for="cep">CEP:</label>
-                        <input type="text" id="cep" placeholder="Por favor digite seu CEP">
-                    </div>
-                    <div class="box">
-                        <label for="numero">Número:</label>
-                        <input type="text" id="numero">
-                    </div>
-                    <div class="box">
-                        <label for="endereco">Endereço:</label>
-                        <input type="text" id="endereco">
-                    </div>
-                </div>
-                <div class="input_box">
-                    <div class="box">
-                        <label for="bairro">Bairro:</label>
-                        <input type="text" id="bairro">
-                    </div>
-                    <div class="box">
-                        <label for="cidade">Cidade:</label>
-                        <input type="text" id="cidade">
-                    </div>
-                    <div class="box">
-                        <label for="estado">Estado:</label>
-                        <input type="text" id="estado">
-                    </div>
-                </div>
-            </fieldset>
-        </form>
-    </main>
-    <script src="app.js"></script>
+    <form action="" method="get" class="form" id="">
+      <div class="input_box">
+        <div class="box">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" placeholder="Por favor digite seu CEP" />
+          <div id="buscar"><i class="fa-solid fa-check"></i></div>
+        </div>
+      </div>
+      <div class="input_response">
+        <div class="box">
+          <label for="">Estado</label>
+          <input type="text" id="estado" />
+        </div>
+        <div class="box">
+          <label for="">Cidade</label>
+          <input type="text" id="cidade" />
+        </div>
+        <div class="box">
+          <label for="">Bairro</label>
+          <input type="text" id="bairro" />
+        </div>
+        <div class="box">
+          <label for="">Endereço</label>
+          <input type="text" id="endereco" />
+        </div>
+        <div class="box">
+          <label for="">Número</label>
+          <input type="text" id="numero" />
+        </div>
+      </div>
+    </form>
+  </main>
+  <script src="app.js"></script>
+  <script src="https://kit.fontawesome.com/eaa61bb77c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

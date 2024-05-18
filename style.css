@@ -1,229 +1,306 @@
 @charset "UTF-8";
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: "Exercito";
-    src: url(Fontes/conthrax-sb.otf);
+  font-family: "Exercito";
+  src: url(Fontes/conthrax-sb.otf);
 }
 
 body,
 html {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(90, 3, 3, 0.808);
 }
 
 main header h1 {
-    font-size: 4rem;
-    font-family: "Exercito";
-    letter-spacing: 0.3rem;
-    padding: 0.5rem 0;
-    color: rgba(255, 255, 0, 0.818);
-    text-align: center;
+  font-size: 3rem;
+  font-family: "Exercito";
+  letter-spacing: 0.3rem;
+  padding: 0.5rem 0;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(190, 12, 12, 0.541);
+  box-shadow: 2px 2px 5px #000;
 }
 
-main .form {
-    display: block;
-    width: auto;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.481);
-    padding: 2rem;
+main header i {
+  color: #000;
 }
 
-fieldset {
-    border-color: rgba(255, 255, 0, 0.818);
-    border-radius: 0.5rem;
-}
-
-legend {
-    font-family: "Arial";
-    font-size: 2rem;
-    color: rgba(255, 255, 0, 0.818);
-    padding: 0.5rem;
-    margin: 1rem;
+.form {
+  display: block;
+  width: auto;
+  height: 100%;
+  background-color: white;
+  padding: 2rem;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 5px #000;
 }
 
 .form .input_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: auto;
-    padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: auto;
+  padding: 1rem;
 }
 
 .form .input_box .box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: 2rem;
-    margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 2rem;
+  margin: 0 1rem;
+  border-bottom: 1px solid #000;
 }
 
 .form .input_box .box label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 2rem;
-    color: rgba(255, 255, 0, 0.818);
-    margin: 0 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 2rem;
+  color: #000;
+  margin: 0 0.1rem;
+  font-weight: bold;
 }
 
 .form .input_box .box input {
-    width: 100%;
-    height: 2rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.649);
-    color: #000;
-    border: 1px solid white;
-    border-radius: 0.5rem;
+  width: 100%;
+  height: 2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.649);
+  color: #000;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+}
+
+.form .input_box .box #buscar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+
+.form .input_box .box #buscar i {
+  color: black;
+}
+
+.form .input_response {
+  background-color: transparent;
+  padding: 1rem 0;
+}
+
+.form .input_response .box {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  background-color: transparent;
+  justify-content: space-around;
+}
+
+.form .input_response .box label {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background-color: transparent;
+  margin: 0.5rem auto;
+  width: 100px;
+}
+
+.form .input_response .box input {
+  background-color: transparent;
+  width: 80%;
+  height: 30px;
+  padding: 10px;
+  margin: 0.5rem auto;
+  outline: none;
+  border: none;
+  border-left: none;
+  border-bottom: 2px solid black;
 }
 
 .form .input_box .box input::placeholder {
-    color: #000;
+  color: #000;
 }
 
 .form .input_box .box input:active {
-    background-color: rgba(255, 255, 255, 0.500);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .form .input_box .box input:hover {
-    cursor: auto;
+  cursor: auto;
 }
 
-@media (max-width: 450px) {
-    main header h1 {
-        font-size: 1rem;
-        padding: 1rem 0;
-    }
+@media screen and (max-width: 450px) {
+  main header h1 {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
 
-    main {
-        width: 100%;
-        margin: auto;
-    }
+  main {
+    width: 90%;
+    margin: auto;
+  }
 
-    main form.form {
-        height: auto;
-        width: 100%;
-    }
+  main form.form {
+    height: auto;
+    width: 100%;
+  }
 
-    legend {
-        font-size: 1rem;
-    }
+  legend {
+    font-size: 1rem;
+  }
 
-    .form .input_box {
-        flex-direction: column;
-        margin: 0;
-    }
+  .form .input_box {
+    flex-direction: column;
+    margin: 0;
+  }
 
+  .form .input_box .box {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
 
-    .form .input_box .box {
-        width: 100%;
-        flex-direction: column;
-        height: auto;
-    }
+  .form .input_box .box input[type="text"]::placeholder {
+    text-align: center;
+  }
 
-    .form .input_box .box label {
-        font-size: 1.3rem;
-        margin: 0.1rem 0rem;
-        padding: 0;
-    }
+  .form .input_box .box #buscar {
+    display: none;
+  }
 
-    .form .input_box .box input {
-        width: 100%;
-        margin: 0;
-    }
+  .form .input_box .box label {
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin: 0.1rem 0rem;
+    padding: 0;
 
-    footer {
-        width: 100vw;
-        height: 2rem;
-        background-color: transparent;
-    }
+  }
 
-    footer p {
-        text-align: center;
-        font-size: 0.8rem;
-        font-family: "Arial";
-        letter-spacing: 2px;
-        color: white;
-    }
+  .form .input_box .box input {
+    width: 100%;
+    margin: 0;
+  }
+
+  footer {
+    width: 100vw;
+    height: 2rem;
+    background-color: transparent;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: "Arial";
+    letter-spacing: 2px;
+    color: white;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
-    main header h1 {
-        font-size: 1.7rem;
-    }
+@media screen and (max-width: 1200px) {
+  main header h1 {
+    font-size: 1.7rem;
+  }
 
-    legend {
-        font-size: 1rem;
-    }
+  legend {
+    font-size: 1rem;
+  }
 
-    .form .input_box {
-        flex-direction: column;
-        margin: 0;
-    }
+  main {
+    width: 90%;
+  }
 
-    .form .input_box .box {
-        width: 90vw;
-        height: auto;
-        margin: 0.2rem 0;
-    }
+  .form {
+    width: auto;
+  }
 
-    .form .input_box .box label {
-        font-size: 1.1rem;
-        margin: 0.1rem 0rem;
-        padding: 0;
-        justify-content: flex-start;
-    }
+  .form .input_box {
+    flex-direction: column;
+    margin: 0;
+  }
 
-    .form .input_box .box input {
-        width: 100%;
-        margin: 0;
-    }
+  .form .input_box .box {
+    width: 90%;
+    height: auto;
+    margin: 0.2rem 0;
+  }
+
+  .form .input_box .box label {
+    font-size: 1.1rem;
+    margin: 0.1rem 0rem;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .form .input_box .box input {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 768px) and (orientation: landscape) {
-    main header h1 {
-        font-size: 1.7rem;
-    }
+  body {
+    background-color: black;
+    height: 600px;
+  }
 
-    legend {
-        font-size: 1rem;
-    }
+  main {
+    background-color: black;
+  }
 
-    .form .input_box {
-        flex-direction: column;
-        margin: 0;
-    }
+  main header h1 {
+    display: none;
+  }
 
-    .form .input_box .box {
-        width: 90vw;
-        height: auto;
-        margin: 0.2rem 0;
-    }
+  .form .input_box {
+    width: auto;
+    justify-content: space-evenly;
+  }
 
-    .form .input_box .box label {
-        font-size: 1.1rem;
-        margin: 0.1rem 0rem;
-        padding: 0;
-        justify-content: flex-start;
-    }
+  .form .input_box .box {
+    width: auto;
+    height: auto;
+    margin: 0.2rem 0;
+  }
 
-    .form .input_box .box input {
-        width: 100%;
-        margin: 0;
-    }
+  .form .input_box .box label {
+    font-size: 1.1rem;
+    margin: 0.1rem 0rem;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .form .input_box .box input {
+    width: 100%;
+    margin: 0;
+  }
 }

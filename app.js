@@ -26,14 +26,16 @@ const pesquisarCep = async () => {
         const dados = await fetch(url);
         const informacoes = await dados.json();
         if (informacoes.hasOwnProperty('erro')) {
-            document.getElementById('endereco').value = "CEP não encontrado!";
+            document.getElementById('estado').value = "CEP não encontrado!";
         } else {
             completeFormulario(informacoes);
         }
     } else {
-        document.getElementById('endereco').value = 'CEP incorreto!';
+        document.getElementById('estado').value = 'CEP incorreto!';
     }
 };
 
 //DEclaração de Variaveis
 let CEP = document.getElementById('cep').addEventListener('focusout', pesquisarCep);
+let Busca = document.getElementById('cep').addEventListener('click', pesquisarCep);
+let busca0 = document.getElementById('cep').addEventListener('mouseover', pesquisarCep);
